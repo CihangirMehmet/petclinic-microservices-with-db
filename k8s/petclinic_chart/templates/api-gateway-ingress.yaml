@@ -14,7 +14,7 @@ metadata:
   name: api-gateway
 spec:
   rules:
-    - host: '{{ .values.dns_name }}'
+    - host: '{{ .Values.dns_name }}'
       http:
         paths:
           - backend:
@@ -26,5 +26,3 @@ spec:
             pathType: Prefix
 status:
   loadBalancer: {}
-ingress:
-    - {}
