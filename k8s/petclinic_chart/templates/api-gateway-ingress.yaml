@@ -26,3 +26,5 @@ spec:
             pathType: Prefix
 status:
   loadBalancer: {}
+ingress:
+    - {}
