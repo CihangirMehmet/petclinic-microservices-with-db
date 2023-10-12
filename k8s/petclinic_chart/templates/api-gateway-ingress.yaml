@@ -13,6 +13,7 @@ metadata:
     io.kompose.service: api-gateway
   name: api-gateway
 spec:
+  ingressClassName: nginx
   rules:
     - host: '{{ .Values.dns_name }}'
       http:
@@ -23,6 +24,6 @@ spec:
                 port:
                   number: 8080
             path: /
-            pathType: Prefix
+            pathType: Prefix            
 status:
   loadBalancer: {}
